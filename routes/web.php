@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
 echo "This is About Page";
-})-> name('gagan');;
+})-> name('gagan');
 Route::get('/contact', function () {
 echo "This is contact Page";
 });
@@ -21,8 +21,11 @@ echo "This is service Page";
 Route::get('/search/{name}', function ($name) {
 echo $name;
 });
-
-//sum/24/25
-Route::get('/sum/{no1}/{no2}', function ($no1, $no2){
+Route::get('/user/{no1}/{no2}', function ($no1, $no2) {
 echo "Sum of $no1 and $no2 is: ", $no1 + $no2;
 });
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+    });
+
+require __DIR__ . "/assignment1.php";
